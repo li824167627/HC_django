@@ -1,0 +1,310 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:18:36 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415360 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 53853)
+spawned uWSGI worker 1 (pid: 53854, cores: 2)
+spawned uWSGI worker 2 (pid: 53856, cores: 2)
+spawned uWSGI worker 3 (pid: 53859, cores: 2)
+spawned uWSGI worker 4 (pid: 53863, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:28:03 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415360 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 57024)
+spawned uWSGI worker 1 (pid: 57025, cores: 2)
+spawned uWSGI worker 2 (pid: 57026, cores: 2)
+spawned uWSGI worker 3 (pid: 57028, cores: 2)
+spawned uWSGI worker 4 (pid: 57031, cores: 2)
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:33:58 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:36:07 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+Wed Oct 25 15:36:14 2023 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Oct 25 15:36:14 2023 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Oct 25 15:36:14 2023 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Oct 25 15:36:14 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Oct 25 15:36:14 2023 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:36:19 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8000 fd 3
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415360 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 55638)
+spawned uWSGI worker 1 (pid: 55639, cores: 2)
+spawned uWSGI worker 2 (pid: 55640, cores: 2)
+spawned uWSGI worker 3 (pid: 55642, cores: 2)
+spawned uWSGI worker 4 (pid: 55645, cores: 2)
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:41:02 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415360 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23205)
+spawned uWSGI worker 1 (pid: 23206, cores: 2)
+spawned uWSGI worker 2 (pid: 23207, cores: 2)
+spawned uWSGI worker 3 (pid: 23210, cores: 2)
+spawned uWSGI worker 4 (pid: 23213, cores: 2)
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 15:43:49 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1029750 bytes (1005 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 44673)
+spawned uWSGI worker 1 (pid: 44674, cores: 2)
+spawned uWSGI worker 2 (pid: 44677, cores: 2)
+spawned uWSGI worker 3 (pid: 44679, cores: 2)
+spawned uWSGI worker 4 (pid: 44681, cores: 2)
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 16:11:02 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.15 (64bit) on [Wed Oct 25 16:14:54 2023] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-11) on 19 May 2017 14:33:49
+os: Linux-3.10.0-514.6.1.el7.x86_64 #1 SMP Wed Jan 18 13:06:36 UTC 2017
+nodename: host-10-100-19-228
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/liyanan/HC_django
+writing pidfile to uwsgi.pid
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/liyanan/HC_django
+your processes number limit is 65535
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:8000).
+bind(): Address already in use [core/socket.c line 769]
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --

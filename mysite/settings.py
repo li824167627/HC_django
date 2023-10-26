@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-q#@*!(l3pk=v4pxa1nc%s^l8)a09r9_f8a+sg$h_4(gf-#ep3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
-
+    'frontend',
+    ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -71,7 +71,7 @@ TEMPLATES = [
 
 # add for vuejs
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend/dist/static"),
+    os.path.join(BASE_DIR, 'frontend/dist/static'),
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
