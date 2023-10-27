@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     addbook () {
-      this.$http.get('http://127.0.0.1:8000/api/add_book?book_name=' + this.input)
+      this.$axios.get('/api/add_book?book_name=' + this.input)
         .then((response) => {
           var res = JSON.parse(response.bodyText)
           if (res.respcode === '000000') {
@@ -86,8 +86,9 @@ export default {
     showbooks () {
       axios({
         methods: 'get',
-        url:'http://127.0.0.1:8000/api/show_books',
+        url:'/api/show_books',
       })
+        console.log(url)
       // this.$http.get('http://127.0.0.1:8000/api/show_books/')
         .then((res) => {
           // console.log('response====', response)
@@ -111,7 +112,7 @@ export default {
       // 确认删除
         .then(() => {
         //删除接口只需要传个id就行了 id是当前点击事件传过来的的id
-          this.$http.post('http://127.0.0.1:8000/api/del_books', {pk:row})
+          this.$axios.post('/api/del_books', {pk:row})
             .then((response) => {
               var res = JSON.parse(response.bodyText)
             if (res.respcode == '000000') {
@@ -138,7 +139,7 @@ export default {
         }).then(({ value }) => {
         //修改接口需要传个id和bookname
           console.log('获取输入的值='+value)
-          this.$http.post('http://127.0.0.1:8000/api/edit_books', {pk:row,bookname:value})
+          this.$axios.post('/api/edit_books', {pk:row,bookname:value})
             .then((response) => {
               var res = JSON.parse(response.bodyText)
             if (res.respcode == '000000') {

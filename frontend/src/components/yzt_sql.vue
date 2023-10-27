@@ -1,12 +1,12 @@
 <template>
     <div class="yzt">
-    
+
     <el-input v-model="input" placeholder="请输入手机号" style="display:inline-table; width: 30%; float:left"></el-input>
     <el-button type="primary" @click="query_sql_yzt()" style="float:left; margin: 2px;">查询</el-button>
-    </div> 
+    </div>
     </template>
-        
-    <script> 
+
+    <script>
         export default {
           name: 'yzt',
           data () {
@@ -16,7 +16,7 @@
         },
           methods: {
             query_sql_yzt () {
-              this.$http.get('http://127.0.0.1:8000/api/query_sql?phone=' + this.input)
+              this.$axios.get('/api/query_sql?phone=' + this.input)
                 .then((response) => {
                   var res = JSON.parse(response.bodyText)
                   if (res.respcode === '000000') {
@@ -36,8 +36,7 @@
                     console.log(res['respmsg'])
                   }
                 })
-            }  
+            }
           }
         }
     </script>
-        

@@ -10,6 +10,8 @@ import axios from 'axios'
 // 将API方法绑定到全局
 Vue.prototype.$axios = axios
 
+// 配置全局域名
+axios.defaults.baseURL = "http://10.100.19.228:8000";
 
 Vue.use(ElementUI)
 Vue.use(VueResource)
@@ -17,6 +19,7 @@ Vue.use(VueResource)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

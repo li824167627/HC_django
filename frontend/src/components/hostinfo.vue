@@ -40,7 +40,7 @@ export default {
     return {
         options: [],
         value: '',
-        value1: ''      
+        value1: ''
     }
 },
 mounted: function () {
@@ -53,7 +53,7 @@ methods: {
 showhost () {
     axios({
         methods: 'get',
-        url:'http://127.0.0.1:8000/api/host',
+        url:'/api/host',
     })
         .then((res) => {
             console.log('res===', res)
@@ -66,7 +66,7 @@ showhost () {
         })
 },
 cattime () {
-    this.$http.post('http://127.0.0.1:8000/api/time_date',{hn:this.value})
+    this.$axios.post('/api/time_date',{hn:this.value})
     .then((response) => {
         var res = JSON.parse(response.bodyText)
         if (res.respcode === '000000') {
@@ -87,7 +87,7 @@ cattime () {
     })
 },
 updatetime() {
-    this.$http.post('http://127.0.0.1:8000/api/set_server_time',{hn:this.value,new_time:this.value1})
+    this.$axios.post('/api/set_server_time',{hn:this.value,new_time:this.value1})
     .then((response) => {
         var res = JSON.parse(response.bodyText)
         if (res.respcode === '000000') {
@@ -106,7 +106,7 @@ updatetime() {
         console.log(res['respmsg'])
         }
     })
-}    
+}
 }
 }
 </script>
