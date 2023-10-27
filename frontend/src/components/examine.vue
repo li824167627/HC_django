@@ -16,9 +16,9 @@ export default {
   methods: {
     cattime () {
       this.$axios.get('/api/examine?order_no=' + this.input)
-        .then((response) => {
-          var res = JSON.parse(response.bodyText)
-          if (res.respcode === '000000') {
+        .then((res) => {
+          // var res = JSON.parse(response.bodyText)
+          if (res.data.respcode === '000000') {
             console.log(res)
             this.$message({
                 type: 'success',

@@ -67,10 +67,10 @@ showhost () {
 },
 cattime () {
     this.$axios.post('/api/time_date',{hn:this.value})
-    .then((response) => {
-        var res = JSON.parse(response.bodyText)
-        if (res.respcode === '000000') {
-        console.log(res)
+    .then((res) => {
+        // var res = JSON.parse(response.bodyText)
+        if (res.data.respcode === '000000') {
+        // console.log(res)
         this.$alert(res.data, '当前服务器时间', {
             confirmButtonText: '确定',
             callback: action => {
@@ -82,28 +82,28 @@ cattime () {
         });
         } else {
         this.$message.error('查询失败失败:'+res['respmsg'])
-        console.log(res['respmsg'])
+        // console.log(res['respmsg'])
         }
     })
 },
 updatetime() {
     this.$axios.post('/api/set_server_time',{hn:this.value,new_time:this.value1})
-    .then((response) => {
-        var res = JSON.parse(response.bodyText)
-        if (res.respcode === '000000') {
-        console.log(res)
+    .then((res) => {
+        // var res = JSON.parse(response.bodyText)
+        if (res.data.respcode === '000000') {
+        // console.log(res)
         this.$alert(res.data, '当前服务器时间', {
             confirmButtonText: '确定',
             callback: action => {
                 this.$message({
                     type: 'success',
-                    message: res['message']
+                    message: res.data['message']
                 });
             }
         });
         } else {
         this.$message.error('查询失败失败:'+res['respmsg'])
-        console.log(res['respmsg'])
+        // console.log(res['respmsg'])
         }
     })
 }

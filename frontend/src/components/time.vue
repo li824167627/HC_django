@@ -16,10 +16,10 @@
       methods: {
         cattime () {
           this.$axios.get('/api/show_time?show_time=' + this.input)
-            .then((response) => {
-              var res = JSON.parse(response.bodyText)
-              if (res.respcode === '000000') {
-                console.log(res)
+            .then((res) => {
+              // var res = JSON.parse(response.bodyText)
+              if (res.data.respcode === '000000') {
+                // console.log(res)
                 this.$alert(res.data, '当前服务器时间', {
                     confirmButtonText: '确定',
                     callback: action => {
@@ -31,7 +31,7 @@
                 });
               } else {
                 this.$message.error('查询失败失败，请重试')
-                console.log(res['respmsg'])
+                // console.log(res['respmsg'])
               }
             })
         }

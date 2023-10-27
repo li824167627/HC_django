@@ -4,7 +4,6 @@
 <el-input v-model="input" placeholder="请输入书名" style="display:inline-table; width: 30%; float:left"></el-input>
 <el-button type="primary" @click="addbook()" style="float:left; margin: 2px;">新增</el-button>
 </el-row>
-
   <el-table
     :data="booklist.filter(data => !search || data.fields.bookname.toLowerCase().includes(search.toLowerCase()))"
     style="width: 100%">
@@ -71,11 +70,11 @@ export default {
   methods: {
     addbook () {
       this.$axios.get('/api/add_book?book_name=' + this.input)
-        .then((response) => {
-          var res = JSON.parse(response.bodyText)
-          if (res.respcode === '000000') {
+        .then((res) => {
+          //var res = JSON.parse(response.bodyText)
+          if (res.data.respcode === '000000') {
             this.showbooks()
-          } else if (res.respcode === '666666'){
+          } else if (res.data.respcode === '666666'){
             this.$message.error(res['respmsg'])
           }else {
             this.$message.error('新增书籍失败，请重试')
@@ -85,10 +84,10 @@ export default {
     },
     showbooks () {
       axios({
-        methods: 'get',
+        methods:'get',
         url:'/api/show_books',
       })
-        console.log(url)
+
       // this.$http.get('http://127.0.0.1:8000/api/show_books/')
         .then((res) => {
           // console.log('response====', response)
@@ -113,9 +112,9 @@ export default {
         .then(() => {
         //删除接口只需要传个id就行了 id是当前点击事件传过来的的id
           this.$axios.post('/api/del_books', {pk:row})
-            .then((response) => {
-              var res = JSON.parse(response.bodyText)
-            if (res.respcode == '000000') {
+            .then((res) => {
+              // var res = JSON.parse(response.bodyText)
+            if (res.data.respcode == '000000') {
               this.showbooks()
               this.$message.success("删除成功");
             } else {
@@ -140,9 +139,9 @@ export default {
         //修改接口需要传个id和bookname
           console.log('获取输入的值='+value)
           this.$axios.post('/api/edit_books', {pk:row,bookname:value})
-            .then((response) => {
-              var res = JSON.parse(response.bodyText)
-            if (res.respcode == '000000') {
+            .then((res) => {
+              // var res = JSON.parse(response.bodyText)
+            if (res.data.respcode == '000000') {
               this.showbooks()
               this.$message.success("修改成功");
             } else {

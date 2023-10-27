@@ -17,10 +17,10 @@
           methods: {
             query_sql_yzt () {
               this.$axios.get('/api/query_sql?phone=' + this.input)
-                .then((response) => {
-                  var res = JSON.parse(response.bodyText)
-                  if (res.respcode === '000000') {
-                    console.log(res)
+                .then((res) => {
+                  // var res = JSON.parse(response.bodyText)
+                  if (res.data.respcode === '000000') {
+                    // console.log(res)
                     this.$alert(`预客户号为：${res.data[0][1]}<br/>客户号为：${res.data[0][2]}`, '一账通查询结果', {
                         confirmButtonText: '确定',
                         dangerouslyUseHTMLString: true,
@@ -33,7 +33,7 @@
                     });
                   } else {
                     this.$message.error('查询失败失败，请重试')
-                    console.log(res['respmsg'])
+                    // console.log(res['respmsg'])
                   }
                 })
             }
