@@ -75,7 +75,7 @@ export default {
           if (res.data.respcode === '000000') {
             this.showbooks()
           } else if (res.data.respcode === '666666'){
-            this.$message.error(res['respmsg'])
+            this.$message.error(res.data['respmsg'])
           }else {
             this.$message.error('新增书籍失败，请重试')
             console.log(res['respmsg'])

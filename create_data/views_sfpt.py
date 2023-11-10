@@ -79,7 +79,7 @@ def examine(request):
         print('当前路径:', current_path)
 
         #创建新文件夹
-        sftp_shell.send(f'mkdir /WLSJ01/return/50/{current_month}/{current_date}\n')
+        sftp_shell.send(f'mkdir -p /WLSJ01/return/50/{current_month}/{current_date}\n')
         sleep(1)
         #上传pdf文件
         sftp_shell.send(f'put /home/bohai/remote_file/WLSJ01_{order_no}_10_001.pdf /WLSJ01/return/50/{current_month}/{current_date}\n')
