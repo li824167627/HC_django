@@ -11,6 +11,8 @@ import axios from 'axios'
 Vue.prototype.$axios = axios
 
 // 配置全局域名
+//http://10.100.19.228:8000
+//http://127.0.0.1:8000
 axios.defaults.baseURL = "http://10.100.19.228:8000";
 
 Vue.use(ElementUI)
