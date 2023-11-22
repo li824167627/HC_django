@@ -16,6 +16,21 @@ from create_data.main.service import chose_sql
 tz = pytz.timezone('Asia/Shanghai')
 
 
+@require_http_methods(["POST"])
+def ApplyNotify(request):
+    response = {}
+    try:
+        print(request.body)
+        postBody = request.body
+        Status = postBody.creditStatus
+        response['respmsg'] = 'success'
+        response['respcode'] = '000000'
+        response['date'] = Status
+    except Exception as e:
+        response['respmsg'] = str(e)
+        response['respcode'] = '999999'
+    return JsonResponse(response)
+
 @require_http_methods(["GET"])
 def query_sql(request):
     response = {}
