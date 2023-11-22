@@ -17,15 +17,15 @@ tz = pytz.timezone('Asia/Shanghai')
 
 
 @require_http_methods(["POST"])
-def ApplyNotify(request):
+def applynotify(request):
     response = {}
     try:
         print(request.body)
         postBody = request.body
-        Status = postBody.creditStatus
+        Status = json.loads(postBody)['param']['creditStatus']
         response['respmsg'] = 'success'
         response['respcode'] = '000000'
-        response['date'] = Status
+        response['creditStatus'] = Status
     except Exception as e:
         response['respmsg'] = str(e)
         response['respcode'] = '999999'
