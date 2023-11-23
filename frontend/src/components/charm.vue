@@ -1,11 +1,11 @@
 <template>
 <div class="home">
 <el-row display="margin-top:10px">
-<el-input v-model="input" placeholder="请输入书名" style="display:inline-table; width: 30%; float:left"></el-input>
+<el-input v-model="input" placeholder="请输入订单号" style="display:inline-table; width: 30%; float:left"></el-input>
 <el-button type="primary" @click="addbook()" style="float:left; margin: 2px;">新增</el-button>
 </el-row>
   <el-table
-    :data="booklist.filter(data => !search || data.fields.bookname.toLowerCase().includes(search.toLowerCase()))"
+    :data="booklist.filter(data => !search || data.fields.loan_request_no.toLowerCase().includes(search.toLowerCase()))"
     style="width: 100%">
     <el-table-column
       label="编号"
@@ -14,16 +14,16 @@
       <template slot-scope="scope"> {{ scope.$index+1 }} </template>
     </el-table-column>
     <el-table-column
-      label="书名"
-      prop="bookname"
+      label="订单号"
+      prop="loan_request_no"
       min-width="100">
-      <template slot-scope="scope"> {{ scope.row.fields.bookname }} </template>
+      <template slot-scope="scope"> {{ scope.row.fields.loan_request_no }} </template>
     </el-table-column>
     <el-table-column
-      label="添加时间"
-      prop="createtime"
+      label="状态"
+      prop="payment_status"
       min-width="100">
-      <template slot-scope="scope"> {{ scope.row.fields.createtime }} </template>
+      <template slot-scope="scope"> {{ scope.row.fields.payment_status }} </template>
     </el-table-column>
     <el-table-column
       align="right">
@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     addbook () {
-      this.$axios.get('/api/add_book?book_name=' + this.input)
+      this.$axios.get('/api/add_book?loan_request_no=' + this.input)
         .then((res) => {
           //var res = JSON.parse(response.bodyText)
           if (res.data.respcode === '000000') {
@@ -138,7 +138,7 @@ export default {
         }).then(({ value }) => {
         //修改接口需要传个id和bookname
           console.log('获取输入的值='+value)
-          this.$axios.post('/api/edit_books', {pk:row,bookname:value})
+          this.$axios.post('/api/edit_books', {pk:row,loan_request_no:value})
             .then((res) => {
               // var res = JSON.parse(response.bodyText)
             if (res.data.respcode == '000000') {

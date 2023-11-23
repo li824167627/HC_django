@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.shortcuts import HttpResponse
-from create_data.models import book
+from create_data.models import book, status
 from create_data.models import hostinfo
 import pytz
 import paramiko
@@ -23,9 +23,13 @@ def applynotify(request):
         print(request.body)
         postBody = request.body
         Status = json.loads(postBody)['param']['creditStatus']
+        loanRequestNo = json.loads(postBody)['param']['loanRequestNo']
+        creditValidity = json.loads(postBody)['param']['creditValidity']
+        a = status(loan_request_no=loanRequestNo,payment_status=Status,Ctime=creditValidity)
+        a.save()
         response['respmsg'] = 'success'
         response['respcode'] = '000000'
-        response['creditStatus'] = Status
+        response['date'] = {'loanRequestNo':loanRequestNo,'Status':Status}
     except Exception as e:
         response['respmsg'] = str(e)
         response['respcode'] = '999999'
@@ -77,8 +81,8 @@ def add_book(request):
 def show_books(request):
     response = {}
     try:
-        books = book.objects.filter()
-        response['list'] = json.loads(serializers.serialize("json", books))
+        sta = status.objects.filter()
+        response['list'] = json.loads(serializers.serialize("json", sta))
         response['respmsg'] = 'success'
         response['respcode'] = '000000'
     except Exception as e:
@@ -94,7 +98,7 @@ def del_books(request):
         print(request.body)
         postBody = request.body
         id = json.loads(postBody)['pk']
-        id = book(id=id)
+        id = status(id=id)
         id.delete()
         response['respmsg'] = 'success'
         response['respcode'] = '000000'

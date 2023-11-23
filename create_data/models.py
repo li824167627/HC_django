@@ -4,6 +4,7 @@ from django.utils import timezone
 
 tz = pytz.timezone('Asia/Shanghai')
 
+
 # create your models here.
 
 
@@ -18,9 +19,26 @@ class book(models.Model):
     def __str__(self):
         return self.bookname
 
+
+class status(models.Model):
+    # 如果没有指定主键的话django会自动新增一个自增id作为主键
+    loan_request_no = models.CharField(max_length=128, verbose_name='订单号')
+    payment_status = models.CharField(max_length=128, verbose_name='状态')
+    Ctime = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    def __unicode__(self):
+        return self.loan_request_no
+
+    def __str__(self):
+        return self.loan_request_no
+
+    class Meta:
+        db_table = 'select_status'
+
+
 class hostinfo(models.Model):
-    hostname = models.CharField(max_length=128,verbose_name='服务器地址')
-    port = models.CharField(max_length=128,verbose_name='端口号')
+    hostname = models.CharField(max_length=128, verbose_name='服务器地址')
+    port = models.CharField(max_length=128, verbose_name='端口号')
     user = models.CharField(max_length=128, verbose_name='账号')
     password = models.CharField(max_length=128, verbose_name='密码')
     date_time = models.DateTimeField(verbose_name='服务器时间')
