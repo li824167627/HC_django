@@ -16,5 +16,6 @@ urlpatterns = [
     path('set_server_time', views.set_server_time),
     path('query_sql', views.query_sql),
     path('examine', views_sfpt.examine),
-    path('applynotify', views.applynotify)
+    path('applynotify', views.applynotify),
+    path('makeapplynotify', views.makeapplynotify),
 ]

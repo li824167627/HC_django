@@ -35,6 +35,26 @@ def applynotify(request):
         response['respcode'] = '999999'
     return JsonResponse(response)
 
+@require_http_methods(["POST"])
+def makeapplynotify(request):
+    response = {}
+    try:
+        print(request.body)
+        postBody = request.body
+        paymentStatus = json.loads(postBody)['param']['paymentStatus']
+        loanRequestNo = json.loads(postBody)['param']['loanRequestNo']
+        loanTime = json.loads(postBody)['param']['loanTime']
+        a = status(loan_request_no=loanRequestNo,payment_status=paymentStatus,Ctime=loanTime)
+        a.save()
+        response['respmsg'] = 'success'
+        response['respcode'] = '000000'
+        response['date'] = {'loanRequestNo':loanRequestNo,'Status':paymentStatus}
+    except Exception as e:
+        response['respmsg'] = str(e)
+        response['respcode'] = '999999'
+    return JsonResponse(response)
+
+
 @require_http_methods(["GET"])
 def query_sql(request):
     response = {}
